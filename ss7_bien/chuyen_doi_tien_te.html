@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<fieldset style="background-color: orangered; padding: 50px; ">
+    <table align="center">
+        <tr>
+            <th><p>Amount</p></th>
+            <th>From Currency</th>
+            <th>To Currency</th>
+        </tr>
+        <tr>
+            <th><input style="height: 10px" type="text" id="Amount" ></th>
+            <td style="text-align: center">
+                <select style="width: 100px;" id="Nhập1">
+                    <option name="VND" value="VND">VND</option>
+                    <option name="USD" value="USD">USD</option>
+                </select>
+            </td>
+            <td style="text-align: center">
+                <select style="width: 100px;" id="Nhập2">
+                    <option value="VND" name="VND">VND</option>
+                    <option value="USD" name="USD">USD</option>
+            </td>
+            <td>
+                <button onclick="Convert()" type="button">Convert</button>
+            </td>
+        </tr>
+    </table>
+    <p align="center" id="Result"></p>
+</fieldset>
+</body>
+<script>
+    function Convert() {
+        let Amount = document.getElementById("Amount").value;
+        let Nhập1 = document.getElementById("Nhập1").value;
+        let Nhập2 = document.getElementById("Nhập2").value;
+        let Result;
+        if (Nhập1 == "USD" && Nhập2 == "VND") {
+            Result = ("Result: " + (Amount * 24000)) + "Đ";
+        }
+        else if (Nhập1 == "VND"&& Nhập2 =="USD") {
+            Result = ("Result: "+ (Amount / 24000)) + "$";
+        }
+        else if (Nhập1 == "VND") {
+            Result = "Result: " + Amount + "Đ"
+        } else {
+            Result = "Result: " + Amount + "$"
+        }
+        document.getElementById("Result").innerHTML = Result;
+    }
+</script>
+</html>

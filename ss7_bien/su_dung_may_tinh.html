@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<label>
+    <input id="a" type="number" placeholder="Nhập số thứ nhất">
+    <input id="b" type="number" placeholder="Nhập số thứ hai">
+</label>
+    <button onclick="cong()">Cộng</button>
+    <button onclick="tru()">Trừ</button>
+    <button onclick="nhan()">Nhân</button>
+    <button onclick="chia()">Chia</button><br><br>
+    <p><b>Kết Quả :</b></p><br>
+    <div id="result">Đây là kết quả</div>
+</body>
+    <script>
+        function cong() {
+            let A = document.getElementById("a").value * 1;
+            let B = document.getElementById("b").value * 1;
+            let Result;
+            Result = A + B;
+            document.getElementById('result').innerHTML = Result;
+        }
+
+        function tru(){
+            let A = document.getElementById("a").value * 1;
+            let B = document.getElementById("b").value * 1;
+            let Result;
+            Result = A - B;
+            document.getElementById("result").innerHTML = Result;
+
+        }
+        function nhan() {
+            let A = document.getElementById("a").value * 1;
+            let B = document.getElementById("b").value * 1;
+            let Result;
+            Result = A * B;
+            document.getElementById("result").innerHTML = Result;
+        }
+        function chia(){
+            let A = document.getElementById("a").value * 1;
+            let B = document.getElementById("b").value * 1;
+            let Result;
+            Result = A / B;
+            document.getElementById("result").innerHTML = Result;
+        }
+    </script>
+</html>
