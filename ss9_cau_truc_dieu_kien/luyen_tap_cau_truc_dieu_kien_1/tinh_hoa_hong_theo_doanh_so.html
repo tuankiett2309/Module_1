@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let doanhSo = prompt('Doanh số bán hàng của tháng này(triệu dồng) :')*1;
+    let hoaHong1 = (doanhSo * 0.03);
+    let hoaHong2 = (doanhSo * 0.05);
+    let hoaHong3 = (doanhSo * 0.10);
+    if (doanhSo >= 50){
+        alert(hoaHong3 + 'triệu đồng');
+    } else if (doanhSo >= 20){
+        alert(hoaHong2 + 'triệu đồng');
+    } else {
+        alert(hoaHong1 + ' triệu đồng');
+    }
+</script>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let soTien = prompt('Nhập số tiền bạn muốn vay :') * 1;
+    let soThang = prompt('Nhập số tháng bạn muốn vay :') * 1;
+    let laiSuat = prompt('Nhập lãi suất theo tháng :') * 1;
+    let soTienLai = soTien * Math.pow((1 + laiSuat), soThang);
+        alert('Lãi ngân hàng ( lãi mẹ đẻ lãi con) là : ' + (soTienLai - soTien));
+</script>
+</html>

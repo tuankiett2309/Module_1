@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+<script>
+  let kiemTra = prompt('Bài kiểm tra')*1;
+  let giuaKy = prompt('Bài thi giữa kỳ')*1;
+  let cuoiKy = prompt('Bài thi cuối kỳ')*1;
+  let trungBinh = (kiemTra+giuaKy+cuoiKy)/3
+  if (trungBinh >= 8.5){
+      alert('Học lực giỏi');
+  }else if (trungBinh >= 6.5){
+      alert('Học lực khá');
+  }else if (trungBinh >= 5){
+      alert('Học lực trung bình');
+  } else {
+      alert('Học lực kém');
+  }
+</script>
+</html>

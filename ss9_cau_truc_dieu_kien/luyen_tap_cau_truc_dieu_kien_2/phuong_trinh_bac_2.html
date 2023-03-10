@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Phương trình bậc 2: ax^2 + bx + c = 0</h2>
+<input id="soThuNhat" placeholder="Nhập Số a">
+<input id="soThuHai" placeholder="Nhập Số b">
+<input id="soThuBa" placeholder="Nhập Số c">
+<button onclick="tinh()">Tính</button>
+<p id="ketQua">Đây là kết quả</p>
+</body>
+<script>
+    function tinh() {
+        let A = document.getElementById('soThuNhat').value*1;
+        let B = document.getElementById('soThuHai').value*1;
+        let C = document.getElementById('soThuBa').value*1;
+        let delta = ((B*B) - 4*A*C);
+        let nghiem1 = -B + Math.sqrt(delta) / (2*A);
+        let nghiem2 = -B - Math.sqrt(delta) / (2*A);
+        if (delta < 0){
+            document.getElementById("ketQua").innerText = ("Phương trình vô nghiệm");
+        } else if (delta > 0){
+            document.getElementById("ketQua").innerText = ("Phương trình tồn tại 2 nghiệm, nghiệm thứ nhất là:" + nghiem1 + " và nghiệm thứ 2 là" + nghiem2);
+        } else {
+            document.getElementById("ketQua").innerText = ("Phương trình có nghiệm kép là :" + (-B/2*A));
+        }
+    }
+</script>
+
+</html>

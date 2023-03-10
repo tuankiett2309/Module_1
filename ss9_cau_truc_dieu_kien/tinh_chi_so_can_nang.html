@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let height = prompt('ChieuCao') *1;
+    let weight = prompt('CanNang') *1;
+    let BMI = weight / (Math.pow(height,2));
+        if (BMI < 18.5) {
+            alert('Underweight');
+        } else if (BMI < 25.0){
+            alert('Normal');
+        } else if (BMI < 30.0){
+           alert('Overweight');
+        } else {
+            alert('Obese')
+        }
+
+</script>
+</body>
+
+</html>

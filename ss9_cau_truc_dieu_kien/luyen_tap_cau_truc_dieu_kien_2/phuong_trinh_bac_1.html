@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Phương trình bậc 1: ax + b = 0</h2>
+<input id="soThuNhat" placeholder="Nhập Số A">
+<input id="soThuHai" placeholder="Nhập Số B">
+<button onclick="tinh()">Tính</button>
+<p id="ketQua">Đây là kết quả</p>
+</body>
+<script>
+    function tinh(){
+        let a = document.getElementById('soThuNhat').value*1;
+        let b = document.getElementById('soThuHai').value*1;
+        document.getElementById('ketQua').innerText = ('Kết quả của x là:') + (-b/a);
+    }
+</script>
+</html>
