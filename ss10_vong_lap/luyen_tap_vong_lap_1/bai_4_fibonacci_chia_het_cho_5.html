@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let so1 = 0;
+    let so2 = 1;
+    let so3 = 0;
+    let chia5 = 0;
+    for (count = 0; count < 20; count++) {
+        so3 = so1 + so2;
+        so1 = so2;
+        so2 = so3;
+        if (so3 % 5 == 0) {
+            chia5 = so3;
+            break;
+        }
+    }
+    document.write("Số đầu tiên trong dãy fibonacci chia hết cho 5 là: " + chia5);
+</script>
+</html>

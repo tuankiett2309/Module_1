@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let count = 0;
+    let number = 2;
+    while (count < 20) {
+        let isPrime = true;
+        if (number == 2 || number == 3) {
+            console.log(number + " là số nguyên tố");
+            number++;
+            count++;
+        }
+        for (let N = 2; N <= Math.sqrt(number); N++) {
+            if (number % N == 0) {
+                isPrime = false;
+                break;
+            }
+        }
+        if (isPrime) {
+            console.log(number + " là số nguyên tố")
+            count++;
+        }
+        number++;
+    }
+</script>
+</html>

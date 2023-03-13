@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let nhietDo = prompt("Nhập nhiệt độ hiện tại của bạn: ") * 1;
+    while (nhietDo < 20) {
+        nhietDo = prompt("Yêu cầu tăng nhiệt độ") * 1;
+        while (nhietDo > 100) {
+            nhietDo = prompt("Yêu cầu hạ nhiệt độ") * 1;
+        }
+    }
+    alert(nhietDo + " là nhiệt độ oke")
+</script>
+</html>

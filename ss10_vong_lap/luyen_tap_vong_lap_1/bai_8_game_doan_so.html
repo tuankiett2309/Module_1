@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button value="game" onclick="game()">Let's Go</button>
+</body>
+<script>
+  function game() {
+      let doanSo = prompt("Số bạn muốn đoán lớn nhất là : ")*1;
+      let soDung = Math.random()*doanSo;
+      console.log(soDung);
+      for (count = 0; count < 3; count++){
+          let soDoan = prompt("Sô bạn đoán là:")*1;
+          if (soDoan > soDung){
+              alert("Sô bạn nhập lớn hơn số đúng");
+          }else if (soDoan < soDung){
+              alert("Số bạn nhâp bé hơn số đúng");
+          }else {
+              alert("Số bạn nhập đã đúng, bạn thật đỉnh");
+          }
+      } alert("Bạn đã hểt số lần thử!")
+  }
+</script>
+</html>
