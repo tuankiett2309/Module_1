@@ -11,19 +11,13 @@
     let count = 0;
     let number = 2;
     while (count < 20) {
-        let isPrime = true;
-        if (number == 2 || number == 3) {
-            console.log(number + " là số nguyên tố");
-            number++;
-            count++;
-        }
-        for (let N = 2; N <= Math.sqrt(number); N++) {
+        let soDung = true;
+         for (let N = 2; N <= Math.sqrt(number); N++) {
             if (number % N == 0) {
-                isPrime = false;
+                soDung = false;
                 break;
             }
-        }
-        if (isPrime) {
+        } if (soDung) {
             console.log(number + " là số nguyên tố")
             count++;
         }
