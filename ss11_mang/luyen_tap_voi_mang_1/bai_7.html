@@ -8,9 +8,24 @@
 
 </body>
 <script>
-  let numbers = [3, 17, 23, 9, 150, 237, 4, 46, 12, 7];
-
-  for (let i = 0; i<numbers.length;i++)
-
-  <script>
+    let numbers = [3, 17, 23, 9, 150, 237, 4, 46, 12, 7];
+    let V = prompt("Nhập số nguyên V: ");
+    let i = 0;
+    let j = 0;
+    while (i < numbers.length) {
+        if (V == numbers[i]) {
+            for ( j = i; j < numbers.length - 1; j++) {
+                numbers[j] = numbers[j + 1];
+                if (numbers[j + 1] == V) {
+                    i--;
+                } else {
+                    break;
+                }
+            }
+            numbers[numbers.length - 1] = 0;
+        }
+        i++;
+    }
+    document.write(numbers)
+</script>
 </html>
