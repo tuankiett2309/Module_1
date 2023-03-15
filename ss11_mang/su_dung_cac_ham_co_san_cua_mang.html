@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    // bài 1
+    let Color = ["Red", "Blue", "Green", "White"];
+    console.log(Color.join(' + '));
+    console.log(Color.toString());
+    console.log(Color.join(' - '));
+
+    // bài 2
+    let numbers = prompt("Nhập số bất kỳ: ");
+    let string = numbers.toString();
+    let result = [string[0]];
+    for (let i = 1; i < string.length; i++) {
+        if ((string[i - 1] % 2 === 0) && (string[i] % 2 === 0)) {
+            result.push('-', string[i]);
+        } else {
+            result.push(string[i]);
+        }
+    }
+    console.log(result.join(''));
+
+    // bài 3
+    let string = prompt("Nhập chuỗi bạn muốn chuyển đổi: ");
+    let chuHoa = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    let chuThuong = 'abcdefghijklmnopqrstuvwxyz';
+    let result = [];
+    for (let i = 0; i < string.length; i++) {
+        if (chuHoa.indexOf(string[i]) !== -1) {
+            result.push(string[i].toLowerCase());
+        } else if (chuThuong.indexOf(string[i]) !== -1) {
+            result.push(string[i].toUpperCase());
+        } else {
+            result.push(string[i]);
+        }
+    }
+    document.write(result.join(''));
+</script>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let numbers = [3, 17, 23, 9, 150, 237, 4, 46, 12, 7];
+    let max = numbers[0];
+    let index = 0;
+    for (let i = 0; i < numbers.length; i++) {
+        if (numbers[i] > max) {
+            max = numbers[i];
+            index = i;
+        }
+    }
+    console.log("Số lớn nhất trong mảng là: " + max + ", nằm ở vị trí thứ: " + index);
+</script>
+</html>

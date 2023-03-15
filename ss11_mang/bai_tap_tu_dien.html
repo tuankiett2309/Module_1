@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Từ điển : </p>
+<input type="text" id="text">
+<button type="submit" onclick="search()">Tìm Kiếm</button>
+<hr>
+<p id="result"></p>
+</body>
+<script>
+    let engLish = ["Loop", "Variable", "Keyword", "Hang Out", "Bar"];
+    let tiengViet = ['Vòng lặp', "Biến", "Từ khoá", "Đi chơi", "Vũ Trường"];
+    let check = document.getElementById("text");
+    console.log(kiemTra.value);
+    let count = 0;
+
+    function search() {
+        for (let i = 0; i < engLish.length; i++) {
+            if (engLish[i] == check.value) {
+                document.getElementById("result").innerHTML = tiengViet[i];
+                count = 0;
+                break;
+            } else {
+                count++;
+            }
+            if (count != 0) {
+                document.getElementById("result").innerHTML = "Không có trong từ điển";
+            }
+        }
+    }
+
+</script>
+</html>

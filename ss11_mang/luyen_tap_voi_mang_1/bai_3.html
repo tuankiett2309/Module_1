@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let numbers = [3, 17, 23, 4, 7];
+    let max = numbers[0];
+    let total = 0;
+    let avg;
+    for (let i = 0; i < numbers.length; i++) {
+        total += numbers[i];
+        avg = total / numbers.length;
+        if (numbers[i] > max) {
+            max = numbers[i];
+        }
+    }
+    console.log("số lớn nhất trong mảng là: " + max);
+    console.log("Trung bình của các phần tử trong mảng là: " + avg);
+
+</script>
+</html>

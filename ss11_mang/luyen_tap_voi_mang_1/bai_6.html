@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let numbers = [3, 7, 23, 9, 150, 237, 4, 46, 12, 7];
+    let count = 0;
+    let check = prompt("Nhập vào sô nguyên muốn kiểm tra: ") * 1;
+    for (let i = 0; i < numbers.length; i++) {
+        if (numbers[i] == check) {
+            count++;
+        }
+    }
+    if (count > 0) {
+        alert(check + " is in the array");
+    } else {
+        alert(check + " is not in the array");
+    }
+    //giáo sư hưng làm
+    // let numbers = [3, 7, 23, 9, 150, 237, 4, 46, 12, 7];
+    // let index = numbers.indexOf(kiemTra);
+    // if (index == (-1)) {
+    //     document.write(kiemTra + " ís not in the array");
+    // } else {
+    //     document.write("kiemTra +" in not in the array");
+    // }
+
+
+</script>
+</html>
