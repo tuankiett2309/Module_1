@@ -9,6 +9,15 @@
 </body>
 <script>
     let characters = ['c','h','a','r','a','c','t','e','r','1','2','3'];
-    document.write(characters.reverse().join(''))
+    let start = 0;
+    let end = characters.length - 1;
+    while (start < end) {
+        let b = characters[start];
+        characters[start] = characters[end];
+        characters[end] = b;
+        start++;
+        end--;
+    }
+    document.write(characters.join(''));
 </script>
 </html>

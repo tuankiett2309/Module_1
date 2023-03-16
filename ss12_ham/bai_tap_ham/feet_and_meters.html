@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function feetToMeter(feet) {
+        let meter = 0.305 * feet;
+        return meter;
+    }
+    function meterToFeet(meter) {
+        let feet = 3.279 * meter;
+        return feet;
+    }
+    let nhapFeet = prompt("Nhập số feet:") * 1;
+    let nhapMeter = prompt("Nhập số meter:") * 1;
+    let swap1 = feetToMeter(nhapFeet);
+    let swap2 = meterToFeet(nhapMeter);
+    alert("chuyển đổi từ feet " + nhapFeet + " sang meter là: " + swap1);
+    alert("chuyển đổi từ meter " + nhapMeter + " sang feet là: " + swap2);
+</script>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let string = "bai-tap-nay-kho-vai";
+    let array = "";
+    for (let i = 0; i < string.length; i++) {
+        if (string[i] == "-") {
+            array = array + "_";
+        } else {
+            array = array + string[i];
+        }
+    }
+    document.write(array);
+</script>
+</html>

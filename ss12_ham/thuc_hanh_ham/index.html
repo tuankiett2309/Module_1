@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--<p onclick="welcome()">Click me</p>-->
+<p> square of</p>
+<input id="input" type="number" oninput="calculate()"> is <p id="result"></p>
+</body>
+<script>
+    function square(number) {
+        let result = number * number;
+        return result;
+    }
+
+    function calculate() {
+        let input = document.getElementById("input").value;
+        let result = square(input);
+        document.getElementById("result").innerText = result;
+    }
+
+    // function welcome(){
+    //     alert("Hello World!");
+    // }
+    // function sum(a,b){
+    //     return b-a;
+    // }
+    // var tru = sum(10,50);
+    // alert(tru);
+</script>
+</html>
