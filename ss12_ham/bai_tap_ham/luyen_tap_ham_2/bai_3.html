@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function giaiThua(number) {
+        let tinhGiaiThua = 1;
+        for (let i = 1; i <= number; i++) {
+            tinhGiaiThua *= i;
+        }
+        return tinhGiaiThua;
+    }
+
+    let input = prompt("Nhập số bất kì để tính giai thừa: ") * 1;
+    let tinh = giaiThua(input);
+    alert(tinh);
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function check(a, b, c) {
+        if (a < b && a < c) {
+            alert("min là: " + a);
+        } else if (b < a && c < a) {
+            alert("min là: " + b);
+        } else {
+            alert("min là: " + c);
+        }
+    }
+
+    let input1 = prompt("Nhập số thứ nhất: ") * 1;
+    let input2 = prompt("Nhập số thứ hai: ") * 1;
+    let input3 = prompt("Nhập số thứ ba: ") * 1;
+    check(input1, input2, input3);
+</script>
+</body>
+</html>

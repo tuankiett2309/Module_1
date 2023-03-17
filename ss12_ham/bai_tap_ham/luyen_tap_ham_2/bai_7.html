@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function swap(so1, so2) {
+
+        let temp = so1;
+        so1 = so2;
+        so2 = temp;
+        ketqua = (so1 + "-" + so2)
+        return ketqua;
+    }
+
+    let input1 = prompt("Nhập số thứ nhất: ") * 1;
+    let input2 = prompt("Nhập số thứ hai: ") * 1;
+    let result = swap(input1, input2);
+    alert("2 số đã được đảo thành " + result);
+</script>
+</body>
+</html>

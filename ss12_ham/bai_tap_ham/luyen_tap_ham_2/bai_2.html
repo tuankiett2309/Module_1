@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function chuVi(number1) {
+        let chuVi = (number1 * 2) * 3.14;
+        return chuVi;
+    }
+
+    function dienTich(number2) {
+        let dienTich = (number2 * number2) * 3.14;
+        return dienTich;
+    }
+
+    let input = prompt("Nhập bán kính hình tròn: ") * 1;
+    let tinh1 = chuVi(input);
+    let tinh2 = dienTich(input);
+    alert("Chu vi của hình tròn là: " + tinh1);
+    alert("Diện tích của hình tròn là: " + tinh2);
+</script>
+</body>
+</html>
