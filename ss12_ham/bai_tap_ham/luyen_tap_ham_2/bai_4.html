@@ -7,16 +7,18 @@
 <body>
 <script>
     function kiemTra(number) {
-        if (number == number) {
-            return true;
+        let result;
+        if (number % 1 == 0) {
+            result = true;
         } else {
-            return false;
+            result = false;
         }
+        return result;
     }
 
-    let A = prompt("Nhập ký tự bất kì: ") * 1;
-    let B = kiemTra(A);
-    alert(B);
+    let input = prompt("Nhập ký tự bất kì: ") * 1;
+    let ketQua = kiemTra(input);
+    alert(ketQua);
 </script>
 </body>
 </html>

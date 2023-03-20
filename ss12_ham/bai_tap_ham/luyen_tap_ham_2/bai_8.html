@@ -6,16 +6,26 @@
 </head>
 <body>
 <script>
-    function swap(b) {
+    function swapArray(number) {
         let array = [];
-        array.push(input);
-        //     for (let i = 0; i < array.length; i++) {
-        //     }
-        // }
+        array.push(number);
+        let start = 0;
+        let end = number.length - 1;
+        for (let i = 0; i < number.length - 1; i++) {
+            if (start < end) {
+                let b = number[start];
+                number[start] = number[end];
+                number[end] = b;
+                start++;
+                end--;
+            }
+        }
+        return array;
     }
 
-    let input = prompt("Nhập chuỗi bất kì: ");
-    let result = swap(input);
+    let input = [9, 8, 7, 6, 5, 4, 3, 2, 1];
+    let result = swapArray(input);
+    console.log(result);
 </script>
 </body>
 </html>

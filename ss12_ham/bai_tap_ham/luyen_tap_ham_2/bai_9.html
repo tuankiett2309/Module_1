@@ -6,8 +6,22 @@
 </head>
 <body>
 <script>
-    function kiemTra() {
-        let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    function kiemTra(array,input) {
+        let count = 0;
+        for (let i = 0; i < array.length; i++) {
+            if (input == array[i]) {
+                count++;
+            }
+        }
+        if (count == 0) {
+           alert("-1");
+        }
+        return count;
+    }
+    let array = [1, 2, 3, 2, 5, 6, 4, 4, 9, 1];
+    let input = prompt("Nhập số bất kì để kiểm tra: ") * 1;
+    let result = kiemTra(array,input)
+    alert("Số lần ký tự xuất hiện trong mảng là: " + result)
 </script>
 </body>
 </html>

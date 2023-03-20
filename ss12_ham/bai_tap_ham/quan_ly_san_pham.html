@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <fieldset style="background-color: aqua; width: 300px;">
+        <legend>Add New Product</legend>
+        <input type="text" id="input" placeholder="New Product" style="width: 200px;">
+        <button onclick="themDanhSach()" value="Add">Add</button>
+    </fieldset>
+    <h3>Display All Product</h3>
+    <p id="result"></p>
+</body>
+<script>
+    let array = [];
+
+    function themDanhSach() {
+        let input = document.getElementById("input").value;
+        array.push(input);
+        document.getElementById("input").value;
+        hienThiSanPham();
+    }
+
+    function hienThiSanPham() {
+        let table = "<table border='1'>"
+        for (let i = 0; i < array.length; i++) {
+            table = table + "<tr>";
+            table = table + "<th style='width: 100px;'>" + array[i] + "</th>";
+            table = table + "<td style='width: 100px; text-align: center'>" + "<button onclick='suaTenSanPham()'>" + "Edit" + "</button>" + "</td>";
+            table = table + "<td style='width: 100px;text-align: center'>" + "<button onclick='xoaSanPham()'>" + "Delete" + "</button>" + "</td>";
+            table = table + "</tr>";
+        }
+        table = table + "</table>";
+        document.getElementById("result").innerHTML = table;
+    }
+
+    function suaTenSanPham(i) {
+        let suaTen = prompt("Sửa tên sản phẩm: ");
+        array.splice(i, 0, suaTen);
+        hienThiSanPham();
+    }
+
+    function xoaSanPham(i) {
+        array.splice(i, 1);
+        hienThiSanPham();
+    }
+
+</script>
+</html>
