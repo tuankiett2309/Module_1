@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="500px" height="450px" style="border:1px solid #d3d3d3; background-color: aqua"></canvas>
+<script>
+    class Rectangle  {
+        constructor(width,height){
+            this.width = width;
+            this.height = height;
+        }
+        Area (){
+            let S = this.width * this.height;
+            return "diện tích hình chữ nhật là: " + S;
+        }
+        Perimeter(){
+            let P = 2 * (this.width + this.height);
+            return "chu vi hình chữ nhật là: " + P;
+        }
+        canvas() {
+            var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+            ctx.fillStyle = "#00FFFF";
+            ctx.beginPath();
+            ctx.rect(50, 50, this.width, this.height);
+            ctx.stroke();
+        }
+    }
+    let input1 = prompt("Nhập Width: ")*1;
+    let input2 = prompt("Nhập Height: ")*1;
+    let result = new Rectangle(input1,input2);
+    alert(result.Area());
+    alert(result.Perimeter());
+    result.canvas();
+</script>
+</body>
+</html>
