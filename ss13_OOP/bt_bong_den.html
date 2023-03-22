@@ -18,6 +18,9 @@
         turnOn() {
             this.status = true;
         }
+        getStatus(){
+            return this.status;
+        }
     }
 
     class SwitchButton {
@@ -44,9 +47,11 @@
     let electricLamp1 = new ElectricLamp(false);
     let switchButton1 = new SwitchButton(true, electricLamp1);
     switchButton1.switchOn();
-    alert(electricLamp1.status);
+    electricLamp1.getStatus(true);
+    alert("Light: On");
     switchButton1.switchOff();
-    alert(electricLamp1.status);
+    electricLamp1.getStatus(false);
+    alert("Light: Off");
 </script>
 </body>
 </html>
