@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="luong" type="text" value="" placeholder="Nhập lương của bạn (Triệu đồng)" style="width: 300px">
+<button type="button" onclick="tinh()" >Tính</button>
+<p id="result">Đây là kết quả</p>
+</body>
+<script>
+    function tinh() {
+        let tinhLuong = document.getElementById('luong').value * 1;
+        if (tinhLuong <= 7) {
+            ketqua = tinhLuong * 0.05;
+            document.getElementById('result').innerHTML = "Tổng huế bạn phải đóng là: " + ketqua + " triệu đồng";
+        } else if (tinhLuong < 15) {
+            ketqua = tinhLuong * 0.15;
+            document.getElementById('result').innerHTML= "Tổng thuế bạn phải đóng là: " + ketqua + " triệu đồng";
+        } else {
+            ketqua = tinhLuong * 0.20;
+            document.getElementById('result').innerHTML = "Tổng thuế bạn phải đóng là: " + ketqua + " triệu đồng";
+        }
+    }
+
+</script>
+</html>

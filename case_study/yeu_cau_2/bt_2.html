@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+<script>
+    let height = prompt("nhập chiều cao") * 1;
+    for (let i = 0; i <= height; i++) {
+        for (let j = i; j < height; j++) {
+            document.write("&nbsp");
+        }
+        for (j = height - i; j < height; j++) {
+            document.write("*");
+        }
+        document.write("<br>");
+    }
+</script>
+</html>
