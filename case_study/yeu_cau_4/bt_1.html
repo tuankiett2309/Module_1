@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="input" placeholder="Nhập chuỗi bất kì">
+<button onclick="swapString()">Swap String</button>
+<button onclick="findMaxLength()">Find Max Length</button>
+<hr>
+<p id="result1"></p>
+<p id="result2"></p>
+<p id="result3"></p>
+<script>
+    function swapString() {
+        let string = document.getElementById("input").value;
+        let arr = string.split(" ");
+        let result = "";
+        let swap;
+        for (let i = 0; i < arr.length; i++) {
+            swap = arr[i].trim().toLowerCase();
+            if (swap !== "") {
+                swap = swap.substr(0, 1).toUpperCase() + swap.substr(1);
+                result += swap + " ";
+            }
+        }
+        document.getElementById("result1").innerHTML = "Chuỗi trước khi chuyển đổi là: " + string;
+        document.getElementById("result2").innerHTML = "Chuỗi sau khi chuyển đổi là: " + result;
+    }
+
+    function findMaxLength() {
+        let string = document.getElementById("input").value;
+        let array = string.match(/\w[a-z]{0,}/gi);
+        let maxLength = array[0];
+        let index = 0;
+        for (let i = 0; i < array.length; i++) {
+            if (maxLength.length < array[i].length) {
+                maxLength = array[i];
+                index++;
+            }
+        }
+        document.getElementById("result3").innerHTML = "Từ dài nhất trong chuỗi là: " + maxLength + ". Và nằm ở vị trí thứ: " + (index+1);
+    }
+</script>
+</body>
+</html>

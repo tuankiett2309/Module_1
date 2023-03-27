@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+
+    function findMax(array) {
+        let max = array[0][0];
+        for (let i = 0; i < array.length; i++) {
+            for (let j = 0; j < array[i].length; j++) {
+                if (array[i][j] > max) {
+                    max = array[i][j];
+                }
+            }
+        }
+        console.log("Số lớn nhất trong mảng là : " + max);
+    }
+
+    function findMin(array){
+        let min = array[0][0];
+        for (let i = 0; i < array.length; i++) {
+            for (let j = 0; j < array[i].length; j++) {
+                if (array[i][j] < min) {
+                    min = array[i][j];
+                }
+            }
+        }
+        console.log("Số nhỏ nhất trong mảng là : "+ min);
+    }
+    let newarray = [
+        [5, 3, 4, 5, 1, 7],
+        [8, 9, 10, 11, 123]
+    ];
+    findMin(newarray);
+    findMax(newarray);
+</script>
+</body>
+</html>

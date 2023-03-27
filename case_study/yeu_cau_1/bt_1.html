@@ -7,20 +7,23 @@
 <body>
 <input id="luong" type="text" value="" placeholder="Nhập lương của bạn (Triệu đồng)" style="width: 300px">
 <button type="button" onclick="tinh()" >Tính</button>
-<p id="result">Đây là kết quả</p>
+<p id="result"></p>
 </body>
 <script>
     function tinh() {
         let tinhLuong = document.getElementById('luong').value * 1;
-        if (tinhLuong <= 7) {
+        if (tinhLuong > 0 && tinhLuong < 7) {
             ketqua = tinhLuong * 0.05;
-            document.getElementById('result').innerHTML = "Tổng huế bạn phải đóng là: " + ketqua + " triệu đồng";
+            document.getElementById('result').innerHTML = "Tổng huế bạn phải đóng là: " + ketqua + " triệu đồng." +
+                " Và lương ròng bạn nhận được là: "+ (tinhLuong - ketqua) + " triệu đồng";
         } else if (tinhLuong < 15) {
             ketqua = tinhLuong * 0.15;
-            document.getElementById('result').innerHTML= "Tổng thuế bạn phải đóng là: " + ketqua + " triệu đồng";
+            document.getElementById('result').innerHTML= "Tổng thuế bạn phải đóng là: " + ketqua + " triệu đồng Và" +
+                " lương ròng bạn nhận được là: "+ (tinhLuong - ketqua) + " triệu đồng";
         } else {
             ketqua = tinhLuong * 0.20;
-            document.getElementById('result').innerHTML = "Tổng thuế bạn phải đóng là: " + ketqua + " triệu đồng";
+            document.getElementById('result').innerHTML = "Tổng thuế bạn phải đóng là: " + ketqua + " triệu đồng Và" +
+                " lương ròng bạn nhận được là: "+ (tinhLuong - ketqua) + " triệu đồng";
         }
     }
 

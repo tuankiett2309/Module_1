@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="addStudents()">Thêm Học Viên</button>
+<button onclick="editStudents()">Sửa tên Học Viên</button>
+<button onclick="deleteStudents()">Xoá Học Viên</button>
+<hr>
+<p id="result"></p>
+<script>
+    let array = [];
+
+    class Students {
+        constructor(id, name, classroom, email, date, module) {
+            this.id = id;
+            this.name = name;
+            this.classroom = classroom;
+            this.email = email;
+            this.date = date;
+            this.module = module;
+        }
+    }
+
+    function showStudents() {
+        let table = "<table border='1' cellpadding='0' width='700px'>";
+        table += "<tr>";
+        table += "<th>" + "ID" + "</th>";
+        table += "<th>" + "Name" + "</th>";
+        table += "<th>" + "Class" + "</th>";
+        table += "<th>" + "Email" + "</th>";
+        table += "<th>" + "Date" + "</th>";
+        table += "<th>" + "Module" + "</th>";
+        table += "</tr>";
+        for (let i = 0; i < array.length; i++) {
+            table += "<tr>";
+            table += "<td style='text-align: center'>" + array[i].id + "</td>";
+            table += "<td style='text-align: center'>" + array[i].name + "</td>";
+            table += "<td style='text-align: center'>" + array[i].classroom + "</td>";
+            table += "<td style='text-align: center'>" + array[i].email + "</td>";
+            table += "<td style='text-align: center'>" + array[i].date + "</td>";
+            table += "<td style='text-align: center'>" + array[i].module + "</td>";
+            table += "</tr>";
+        }
+        table += "</table>";
+        document.getElementById("result").innerHTML = table;
+    }
+
+    function addStudents() {
+        let id = prompt("Thêm id của học viên");
+        let name = prompt("Thêm tên của học viên");
+        let classroom = prompt("Thêm lớp của học viên");
+        let email = prompt("Thêm email của học viên");
+        let date = prompt("Thêm date của học viên");
+        let module = prompt("Thêm module");
+        let student = new Students(id, name, classroom, email, date, module);
+        array.push(student);
+        showStudents();
+    }
+
+    function editStudents() {
+        let input = prompt("Nhập id học viên");
+        for (let i = 0; i < array.length; i++) {
+            if (input == array[i].id) {
+                array[i].name = prompt("Nhập lại tên");
+                array[i].classroom = prompt("Nhập lại lớp");
+                array[i].email = prompt("Nhập lại email");
+                array[i].date = prompt("Nhập lại ngày sinh");
+                array[i].module = prompt("Nhập lại module");
+            }
+        }
+        showStudents();
+    }
+
+    function deleteStudents() {
+        let input = prompt("Nhập id học viên");
+        // for (let i = 0; i < array.length; i++) {
+        //     if (array[i].id === input) {
+        //         confirm("Bạn muốn xoá không?");
+        //         array.splice(i, 1);
+        //     }
+        // }
+        let flag = true;
+        for (let i = 0; i < array[i].id.length; i++) {
+            if (input == array[i].id) {
+                flag = false;
+                break;
+            }
+            if (flag) {
+                confirm("Bạn muốn xoá không");
+                if (confirm == true) {
+                    array.splice(i, 1);
+                } else {
+                    alert("Không có mã học viên này");
+                }
+            }
+        }
+        showStudents();
+    }
+</script>
+</body>
+</html>

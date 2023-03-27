@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="orderDrink()">Order Drink</button>
+
+<p id="result"></p>
+<p id="result2"></p>
+</body>
+<script>
+    let fruilt = ["Cà rốt", "Nước Cam", "Nước dừa", "Cà phê", "Cà chua", "Trà Sữa"];
+    let money = [15, 30, 30, 17, 25, 50]
+
+    function orderDrink() {
+        let table = "<table border='1' cellspacing='0'>";
+        table += "<tr>";
+        table += "<th>" + "STT" + "</th>";
+        table += "<th>" + "Tên Thức Uống" + "</th>";
+        table += "<th>" + "Giá" + "</th>";
+        table += "<th colspan='2'>" + "Offer" + "</th>";
+        table += "<tr>";
+        for (let i = 0; i < fruilt.length; i++) {
+            table += "<tr>";
+            table += "<td style='text-align: center'>" + (i + 1) + "</td>";
+            table += "<td>" + fruilt[i] + "</td>";
+            table += "<td>" + money[i] + "K" + "</td>";
+            table += "<td>" + "<button onclick='chooseDrink(" + i + ")'>Select</button>" + "</td>";
+            table += "<td>" + "<button onclick='quitOrder()'>Quit</button>" + "</td>";
+            table += "</td>";
+        }
+        table += "</table>";
+        document.getElementById("result").innerHTML = table;
+    }
+
+    function chooseDrink(index) {
+        let input = confirm("Do you want order ?");
+        if (input === false) {
+            alert("Nice to meet you, see you again!");
+        } else {
+            let input2 = prompt("Please, enter the quantity you want to order: ") * 1;
+            alert("The total amount you have to pay is: " + money[index]*input2 + "K. Please enjoy it.");
+        }
+    }
+
+    function quitOrder() {
+        let quit = confirm("Do you want exit ? ");
+        if (quit === true) {
+            alert("See you again.");
+        } else {
+            alert("Please, continue to order :)");
+        }
+    }
+</script>
+</html>

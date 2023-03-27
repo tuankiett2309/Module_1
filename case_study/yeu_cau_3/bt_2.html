@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array1 = [1, 2, 3, 4, 5];
+    let array2 = [2, 3, 4, 5, 6, 7, 8, 6];
+    let array3 = [];
+    for (let i = 0; i < array2.length; i++) {
+        let flag = true;
+        for (let j = 0; j < array1.length; j++) {
+            if (array2[i] == array1[j]) {
+                flag = false;
+                break;
+            }
+        }
+        if (flag) {
+            let flag2 = true;
+            for (let j = 0; j < array3.length; j++) {
+                if (array2[i] == array3[j]) {
+                    flag2 = false;
+                    break;
+                }
+            }
+            if (flag2) {
+                array3.push(array2[i]);
+            }
+        }
+    }
+    console.log(array3);
+</script>
+</body>
+</html>

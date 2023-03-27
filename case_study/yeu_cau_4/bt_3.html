@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let string1 = "aabccfegh";
+    let string2 = "adcaafegh";
+    let array1 = [];
+    let array2 = [];
+    array1 = Array.from(string1);
+    array2 = Array.from(string2);
+    let newArray = [];
+    let count = 0;
+    for (let i = 0; i < array1.length; i++) {
+        for (let j = 0; j < array2.length; j++) {
+            if (array1[i] == array2[j]) {
+                newArray.push(array1[i]);
+                count++;
+                array2.splice(j, 1);
+                break;
+            }
+        }
+    }
+    console.log(newArray);
+    console.log(count);
+</script>
+</body>
+</html>
