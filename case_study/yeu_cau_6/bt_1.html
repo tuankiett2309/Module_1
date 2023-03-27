@@ -76,25 +76,10 @@
 
     function deleteStudents() {
         let input = prompt("Nhập id học viên");
-        // for (let i = 0; i < array.length; i++) {
-        //     if (array[i].id === input) {
-        //         confirm("Bạn muốn xoá không?");
-        //         array.splice(i, 1);
-        //     }
-        // }
-        let flag = true;
-        for (let i = 0; i < array[i].id.length; i++) {
-            if (input == array[i].id) {
-                flag = false;
-                break;
-            }
-            if (flag) {
-                confirm("Bạn muốn xoá không");
-                if (confirm == true) {
-                    array.splice(i, 1);
-                } else {
-                    alert("Không có mã học viên này");
-                }
+        for (let i = 0; i < array.length; i++) {
+            if (array[i].id === input) {
+                confirm("Bạn muốn xoá không?");
+                array.splice(i, 1);
             }
         }
         showStudents();
