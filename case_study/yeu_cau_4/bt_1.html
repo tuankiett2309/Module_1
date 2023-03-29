@@ -31,7 +31,7 @@
 
     function findMaxLength() {
         let string = document.getElementById("input").value;
-        let array = string.match(/\w[a-z]{0,}/gi);
+        let array = string.split(" ");
         let maxLength = array[0];
         let index = 0;
         for (let i = 0; i < array.length; i++) {
@@ -40,7 +40,7 @@
                 index++;
             }
         }
-        document.getElementById("result3").innerHTML = "Từ dài nhất trong chuỗi là: " + maxLength + ". Và nằm ở vị trí thứ: " + (index+1);
+        document.getElementById("result3").innerHTML = "Từ dài nhất trong chuỗi là: " + maxLength + ". Và nằm ở vị trí thứ: " + (index + 1);
     }
 </script>
 </body>

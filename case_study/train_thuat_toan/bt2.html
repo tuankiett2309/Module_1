@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let input = prompt("Nhập số tháng") * 1;
+    if (input > 12) {
+        alert("Không có tháng này");
+    } else if (input === 1 || input === 3 || input === 5 || input === 7 || input === 8 || input === 9 || input === 10 || input === 12) {
+        alert("Tháng này có 31 Ngày");
+    } else if (input === 2) {
+        alert("Tháng này có 28 hoặc 29 ngày");
+    } else {
+        alert("tháng này có 30 ngày");
+    }
+</script>
+</body>
+</html>
