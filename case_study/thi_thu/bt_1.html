@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array = [];
+    let input = prompt("Nhập n phần tử của mảng") * 1;
+    if (input <= 50) {
+        array.push(input)
+        for (let i = 0; i < input; i++) {
+            array[i] = prompt("Nhập") * 1;
+        }
+        document.write(array);
+    }
+
+    let avg = 0;
+    let sum = 0;
+    let count = 0;
+    for (let i = 0; i < array.length; i += 3) {
+        if (array[i] % 5 == 0) {
+            sum += array[i];
+            count++;
+            avg = sum / count;
+        }
+    }
+    document.write("<br>");
+    document.write("tổng là: " + avg);
+</script>
+</body>
+</html>

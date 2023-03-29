@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="add()">ADD</button>
+<button onclick="deletee()">DELETE</button>
+<p id="result">
+    <script>
+        let array = [];
+
+        class Computer {
+            constructor(id, name, nameProduct, price) {
+                this.id = id;
+                this.name = name;
+                this.nameProduct = nameProduct;
+                this.price = price;
+            }
+
+            setId() {
+                this.id = id;
+            }
+
+            getId() {
+                return this.id;
+            }
+
+            setName() {
+                this.name = name;
+            }
+
+            getName() {
+                return this.name;
+            }
+
+            setNameProduct() {
+                this.nameProduct = nameProduct;
+            }
+
+            getNameProduct() {
+                return this.nameProduct;
+            }
+
+            setPrice() {
+                this.price = price;
+            }
+
+            getPrice() {
+                return this.price;
+            }
+        }
+
+        function showTable() {
+            let table = "<table border='1' cellspacing='0'>";
+            table += "<tr>";
+            table += "<td>" + "ID" + "</td>";
+            table += "<td>" + "Name" + "</td>";
+            table += "<td>" + "Mã máy" + "</td>";
+            table += "<td>" + "Giá" + "</td>";
+            table += "<tr>";
+            for (let i = 0; i < array.length; i++) {
+                table += "<tr>";
+                table += "<td>" + array[i].getId() + "</td>";
+                table += "<td>" + array[i].getName() + "</td>";
+                table += "<td>" + array[i].getNameProduct() + "</td>";
+                table += "<td>" + array[i].getPrice() + "</td>";
+                table += "<tr>";
+            }
+            table += "</table>";
+            document.getElementById("result").innerHTML = table;
+        }
+
+        function add() {
+            let id = prompt("nhập id");
+            let name = prompt("nhập name");
+            let nameProduct = prompt("nhập name product");
+            let price = prompt("nhập price");
+            let result = new Computer(id, name, nameProduct, price);
+            array.push(result);
+            showTable();
+        }
+
+        function deletee() {
+            let input = prompt("Nhập id bạn muốn xoá");
+            for (let i = 0; i < array.length; i++) {
+                if (array[i].id == input) {
+                    let conf = confirm("Bạn muốn xoá không?")
+                    array.splice(i, 1);
+                }
+            }
+        }
+
+    </script>
+</body>
+</html>

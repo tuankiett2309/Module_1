@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function findNumberFibonaci(num) {
+        let a = 0;
+        let b = 1;
+        let temp;
+        for (let i = 1; i < num; i++) {
+            console.log(a);
+            temp = a + b;
+            a = b;
+            b = temp;
+        }
+    }
+    let input = prompt("nhập số ")*1;
+    findNumberFibonaci(input);
+    
+</script>
+</body>
+</html>
